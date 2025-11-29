@@ -1,0 +1,22 @@
+{
+  "name": "time-marketplace-contracts",
+  "version": "1.0.0",
+  "description": "FHEVM 0.9 Time Marketplace Smart Contracts",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network sepolia",
+    "verify": "hardhat verify --network sepolia",
+    "test": "hardhat test"
+  },
+  "dependencies": {
+    "@fhevm/solidity": "^0.9.1",
+    "@zama-fhe/oracle-solidity": "^0.1.0",
+    "@openzeppelin/contracts": "^5.0.0"
+  },
+  "devDependencies": {
+    "@fhevm/hardhat-plugin": "^0.1.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0",
+    "dotenv": "^16.0.0"
+  }
+}

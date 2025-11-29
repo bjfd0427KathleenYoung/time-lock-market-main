@@ -190,7 +190,6 @@ contract TimeMarketplace is EthereumConfig {
 âââ package.json                    # Dependencies
 âââ QUICKSTART.md                   # 5-minute guide
 âââ FHEVM_SETUP_GUIDE.md            # Full documentation
-âââ FHE_COMPLETE_GUIDE_FULL_CN.md  # Chinese guide (original)
 ```
 
 ---
@@ -250,7 +249,6 @@ function create(externalEuint64 encryptedPrice, bytes calldata proof) external
 
 - **Quick Start**: [QUICKSTART.md](./QUICKSTART.md) - 5 minutes
 - **Full Setup**: [FHEVM_SETUP_GUIDE.md](./FHEVM_SETUP_GUIDE.md) - Complete guide
-- **Chinese Guide**: [FHE_COMPLETE_GUIDE_FULL_CN.md](./FHE_COMPLETE_GUIDE_FULL_CN.md) - Original reference
 - **Zama Docs**: https://docs.zama.ai/fhevm
 
 ---

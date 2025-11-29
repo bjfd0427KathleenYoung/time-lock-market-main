@@ -130,7 +130,6 @@ fixCommonJSImports()
 | `FHEVM_SETUP_GUIDE.md` | Complete implementation guide | Developers (Detailed) |
 | `README_FHEVM.md` | Project overview & architecture | All users |
 | `PROJECT_SUMMARY.md` | This file! | Project managers |
-| `FHE_COMPLETE_GUIDE_FULL_CN.md` | Original Chinese reference | Advanced developers |
 
 **Example Files**:
 ```
@@ -421,7 +420,6 @@ All â means **READY**:
 **Documentation Flow**:
 1. **Quick Start** â `QUICKSTART.md` (5 min)
 2. **Learn More** â `FHEVM_SETUP_GUIDE.md` (30 min)
-3. **Deep Dive** â `FHE_COMPLETE_GUIDE_FULL_CN.md` (Reference)
 
 ---
 

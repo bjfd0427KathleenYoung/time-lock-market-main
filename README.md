@@ -1,73 +1,44 @@
-# Welcome to your Lovable project
+# TimeMarketplaceFHE Hardhat Project
 
-## Project info
+Use this package to compile, test, and deploy the FHE-enabled smart contract.
 
-**URL**: https://lovable.dev/projects/1bd1a922-d2fe-4fb7-92d9-4e96be0f123a
+## 1. Install dependencies
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/1bd1a922-d2fe-4fb7-92d9-4e96be0f123a) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+cd contracts
+npm install
 ```
 
-**Edit a file directly in GitHub**
+## 2. Configure environment variables
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+cp .env.example .env
+```
 
-**Use GitHub Codespaces**
+Fill in:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `SEPOLIA_RPC_URL`: HTTPS RPC endpoint (default is a public RPC).
+- `PRIVATE_KEY`: Deployer wallet private key (without the `0x` prefix).
+- `TREASURY_ADDRESS` (optional): Treasury wallet; defaults to the deployer.
+- `ETHERSCAN_API_KEY` (optional): Enables contract verification.
 
-## What technologies are used for this project?
+## 3. Compile and test
 
-This project is built with:
+```bash
+npx hardhat compile
+npx hardhat test
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 4. Deploy to Sepolia
 
-## How can I deploy this project?
+```bash
+npm run deploy:sepolia
+```
 
-Simply open [Lovable](https://lovable.dev/projects/1bd1a922-d2fe-4fb7-92d9-4e96be0f123a) and click on Share -> Publish.
+The script reports the deployed address and reminders for updating the frontend.
 
-## Can I connect a custom domain to my Lovable project?
+## 5. Verify (optional)
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+npm run verify:sepolia -- <deployed_address> <treasury_address>
+```

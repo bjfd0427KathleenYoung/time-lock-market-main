@@ -325,7 +325,7 @@ contract TimeMarketplaceFHE is Ownable, ReentrancyGuard, ZamaEthereumConfig {
         handlesList[0] = FHE.toBytes32(offer.encryptedPrice);
         handlesList[1] = FHE.toBytes32(offer.encryptedSlots);
 
-        // ⭐ FHEVM 0.9: Verify decryption proof (reverts internally on failure)
+        //  FHEVM 0.9: Verify decryption proof (reverts internally on failure)
         FHE.checkSignatures(handlesList, cleartexts, decryptionProof);
 
         // Decode cleartext values

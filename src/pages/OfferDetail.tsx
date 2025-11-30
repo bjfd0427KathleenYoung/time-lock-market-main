@@ -277,7 +277,7 @@ export default function OfferDetail() {
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Price per slot</span>
                   <span className="font-medium">
-                    {offer.isEncrypted ? "🔒 Encrypted" : `${offer.price} ETH`}
+                    {offer.isEncrypted ? " Encrypted" : `${offer.price} ETH`}
                   </span>
                 </div>
                 <div className="flex justify-between text-sm">
@@ -288,7 +288,7 @@ export default function OfferDetail() {
                 <div className="flex justify-between">
                   <span className="font-semibold">Total</span>
                   <span className="text-xl font-bold text-primary">
-                    {offer.isEncrypted ? "🔒" : `${totalPrice} ETH`}
+                    {offer.isEncrypted ? "" : `${totalPrice} ETH`}
                   </span>
                 </div>
               </div>
